@@ -153,19 +153,19 @@ if __name__ == "__main__" :
     
     rename_message_handler = MessageHandler(
         rename_message_f,
-        filters=filters.command(["rename"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command(["rename@uploadinghb4allbot"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(rename_message_handler)
     #
     upload_document_handler = MessageHandler(
         upload_document_f,
-        filters=filters.command(["upload"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command(["upload@uploadinghb4allbot"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(upload_document_handler)
 
     help_text_handler = MessageHandler(
         help_message_f,
-        filters=filters.command(["help"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command(["help@uploadinghb4allbot"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(help_text_handler)
     #
@@ -188,13 +188,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=filters.command([f"{SAVE_THUMBNAIL}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([f"{SAVETHUMBNAIL@uploadinghb4all}"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=filters.command([f"{CLEAR_THUMBNAIL}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([f"{CLEARTHUMBNAIL@uploadinghb4all}"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(clear_thumb_nail_handler)
     #
